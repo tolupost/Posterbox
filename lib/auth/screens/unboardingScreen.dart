@@ -84,7 +84,7 @@ class _onboardingScreenState extends State<onboardingScreen>  with TickerProvide
                   SizedBox(
                       height: 100.h,
                       width: 200.w,
-                      child: Image.asset('assets/logo2.png',fit: BoxFit.contain,)),
+                      child: Image.asset('assets/logo2.jpg',fit: BoxFit.contain,)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: imgList.asMap().entries.map((entry) {
@@ -133,7 +133,7 @@ class _onboardingScreenState extends State<onboardingScreen>  with TickerProvide
                   return Column(
                     children: [
                       Padding(
-                        padding:  EdgeInsets.all(8.h),
+                        padding:  EdgeInsets.symmetric(vertical:8.h, horizontal: 8.w),
                         child: Text(title, style: globalvariable.lgtext),
                       ),
                       Text(subtitle, style: globalvariable.lgtext1,textAlign: TextAlign.center),
@@ -155,8 +155,40 @@ class _onboardingScreenState extends State<onboardingScreen>  with TickerProvide
                   CustomButton(text: 'Sign Up', onTap: ()=> Navigator.push(context,  MaterialPageRoute(
                     builder: (context) =>  const SignUp(),
                   ))),
+             Padding(
+               padding:  EdgeInsets.symmetric(horizontal: 10,vertical: 5.h),
+               child: ElevatedButton(
 
-                  CustomButton(text: 'Login', onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));},color: Colors.white,),
+                 onPressed: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => const
+                               Login()));
+                 },
+                 style: ElevatedButton.styleFrom(
+                   side: BorderSide(
+                       color:globalvariable.primarycolor,width: 1,
+                       style: BorderStyle.solid
+                   ),
+                   minimumSize:  Size(double.infinity, 50.h),
+
+
+                   maximumSize:  Size(double.infinity, 50.h),
+                 ),
+                 child: Text(
+                  'Login',
+                   style: TextStyle(
+                     fontSize: 14.h,
+                     color:  globalvariable.primarycolor,
+                   ),
+                 ),
+               ),
+             ),
+
+                  // CustomButton(
+                  //   text: 'Login',
+                  //   onTap: (){
+                  //     Navigator.push(context, MaterialPageRoute(builder: (context) => const
+                  //             Login()));},color: Color.fromARGB(255,254, 254, 254),
+                  // ),
                 ],
               ),
            ))

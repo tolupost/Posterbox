@@ -46,10 +46,11 @@ dependencies:
   intl: ^0.17.0
   file_picker: ^5.2.9
   badges: ^2.0.2
-  flutter_screenutil: ^5.7.0
+  flutter_screenutil: ^5.9.0
   permission_handler: ^10.2.0
   flutter_paystack: ^1.0.7
   onesignal_flutter: ^3.5.1
+  rename: ^3.0.2
 
 
 

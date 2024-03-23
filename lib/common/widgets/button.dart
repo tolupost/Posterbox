@@ -22,8 +22,13 @@ class CustomButton extends StatelessWidget {
 
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
-          side: BorderSide(color:globalvariable.primarycolor,width: 1,style: BorderStyle.solid ),
-          minimumSize:  Size(double.infinity, 50.h), backgroundColor: color,
+          side: BorderSide(
+              color:globalvariable.primarycolor,width: 1,
+              style: BorderStyle.solid
+          ),
+          minimumSize:  Size(double.infinity, 50.h),
+          backgroundColor: color,
+
          maximumSize:  Size(double.infinity, 50.h),
         ),
         child: Text(

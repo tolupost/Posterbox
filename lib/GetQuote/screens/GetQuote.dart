@@ -211,7 +211,7 @@ class _GetQuoteState extends State<GetQuote> with TickerProviderStateMixin{
                                           focusNode: focusNode,
                                           controller: _state1Controller,
                                           decoration: InputDecoration(
-
+                                            contentPadding: EdgeInsets.only(top: 10.h, left: 10.w),
                                             hintText: _hasFocus ? '' : 'Sending from',
                                             hintStyle: const TextStyle(color: Colors.black12),
                                             errorBorder: const OutlineInputBorder(
@@ -315,7 +315,7 @@ class _GetQuoteState extends State<GetQuote> with TickerProviderStateMixin{
                                       focusNode: focusNode,
                                       controller: _state2Controller,
                                       decoration: InputDecoration(
-
+                                        contentPadding: EdgeInsets.only(top: 10.h, left: 10.w),
                                         hintText: _hasFocus ? '' : 'Sending To',
                                         hintStyle: const TextStyle(color: Colors.black12),
                                         errorBorder: const OutlineInputBorder(
@@ -377,7 +377,7 @@ class _GetQuoteState extends State<GetQuote> with TickerProviderStateMixin{
                   ],
                 ))),
         FadeTransition(
-          opacity: animation2 as dynamic,
+             opacity: animation2 as dynamic,
           child: Transform(
             transform: Matrix4.translationValues(delayedAnimation!.value * 40, 0, 0),
             child: Column(

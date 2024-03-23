@@ -227,13 +227,13 @@ class _VerificationState extends State<Verification> with TickerProviderStateMix
                 ),
               ],
             ),
-    FadeTransition(
-    opacity: animation1 as dynamic,
-    child: Transform(
-    transform: Matrix4.translationValues(0, muchDelayAnimation!.value * 40, 0),
-    child:isLoading
-                ? const Center(child: CircularProgressIndicator()):CustomButton(text: 'Next', onTap: () {
-                  signUpUser();
+          FadeTransition(
+              opacity: animation1 as dynamic,
+              child: Transform(
+                 transform: Matrix4.translationValues(0, muchDelayAnimation!.value * 40, 0),
+                child:isLoading
+                  ? const Center(child: CircularProgressIndicator()):CustomButton(text: 'Next', onTap: () {
+                     signUpUser();
                 })))],
         ),
       ),

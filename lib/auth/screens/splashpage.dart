@@ -38,7 +38,7 @@ class _splashpageState extends State<splashpage> {
     return Scaffold(
       backgroundColor: globalvariable.primarycolor,
       body: Center(
-        child: Image.asset('assets/logo.png'),
+        child: Image.asset('assets/logo.jpg'),
       ),
     );
   }

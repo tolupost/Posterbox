@@ -92,9 +92,9 @@ class AuthService {
 
       var value = await OneSignal.shared.getDeviceState();
       String? deviceId = value!.userId;
-      print(deviceId);
+
       OneSignal.shared.promptUserForPushNotificationPermission().then((accepted) {
-    print("Accepted permission: $accepted");
+
   });
       print(deviceId);
       http.Response res = await http.post(

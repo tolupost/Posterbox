@@ -180,6 +180,7 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin{
                     SizedBox(height: 10,),
                     Row(
                       children: [
+                        SizedBox(width: 4.w,),
                         Container(
                           height: 10,
                           width: 10.w,
@@ -189,7 +190,7 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin{
                               border: Border.all(width: 2.w,color: globalvariable.primarycolor)
                           ),
                         ),
-                        SizedBox(width: 10.w,),
+                        SizedBox(width: 14.w,),
                         Autocomplete<String>(
                           optionsBuilder: (TextEditingValue textEditingValue) {
                             if (textEditingValue.text.isEmpty) {
@@ -221,7 +222,7 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin{
                                           focusNode: focusNode,
                                           controller: _fromController,
                                           decoration: InputDecoration(
-
+                                            contentPadding: EdgeInsets.only(top: 10.h, left: 10.w),
                                             hintText: _hasFocus ? '' : 'Travelling from',
                                             hintStyle: const TextStyle(color: Colors.black12),
                                             errorBorder: const OutlineInputBorder(
@@ -286,7 +287,7 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin{
                     SizedBox(height: 5.h,),
                     Row(
                       children: [
-                        const Icon(Icons.location_pin,color: globalvariable.primarycolor,size: 10,),
+                        const Icon(Icons.location_pin,color: globalvariable.primarycolor,size: 20,),
                         SizedBox(width: 10.w,),
                         Autocomplete<String>(
                           optionsBuilder: (TextEditingValue textEditingValue) {
@@ -319,7 +320,7 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin{
                                           focusNode: focusNode,
                                           controller: _toController,
                                           decoration: InputDecoration(
-
+                                            contentPadding: EdgeInsets.only(top: 10.h, left: 10.w),
                                             hintText: _hasFocus ? '' : 'Travelling to',
                                             hintStyle: const TextStyle(color: Colors.black12),
                                             errorBorder: const OutlineInputBorder(

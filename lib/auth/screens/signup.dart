@@ -57,7 +57,8 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
     return (value == null) ? false : RegExp(pattern).hasMatch(value);
   }
   bool isEmail(String s) => hasMatch(s,
-      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
+      r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+
   bool isLoading = false;
 
   void generateOtp(){

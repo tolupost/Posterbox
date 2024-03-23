@@ -93,9 +93,6 @@ class _HomeScreenState extends State<HomeScreen>   with SingleTickerProviderStat
     final userProvider = Provider.of<UserProvider>(context, listen: false);
 
     final deliveryProvider = Provider.of<DeliveryProvider>(context, listen: false);
-    print(userProvider.user.ongoing);
-    print(userProvider.user.id);
-    print(progress);
     try {
       http.Response res = await http.post(
         Uri.parse('$uri/api/change-order-status'),
@@ -185,7 +182,7 @@ return AnimatedBuilder(animation: animationController!,
                             children: [
                               SizedBox(),
                             SizedBox(height: 46.h,
-                                width:119.w,child: Image.asset('assets/logo.png')),
+                                width:119.w,child: Image.asset('assets/logo.jpg')),
                             GestureDetector(
                                 onTap: ()=> Navigator.push(context,  MaterialPageRoute(
                                   builder: (context) =>   const Notifications(),
@@ -236,7 +233,7 @@ return AnimatedBuilder(animation: animationController!,
                                              Navigator.push(context, MaterialPageRoute(builder: (context) => const DeliveryScreen() ));
                                             }, ),
                                           contentPadding:
-                                          const EdgeInsets.only(left: 15.0, top: 15.0),
+                                           EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 10.h ),
                                           hintText: 'Enter Tracking Number',
                                           hintStyle: const TextStyle(
                                               color: Colors.grey,
@@ -335,7 +332,7 @@ return AnimatedBuilder(animation: animationController!,
                     builder: (BuildContext context) {
                       return Container(
                         height: MediaQuery.of(context).size.height * 0.65,
-                       width: 200.w,
+                       width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
                           color: Colors.white,
@@ -373,7 +370,8 @@ return AnimatedBuilder(animation: animationController!,
                               SizedBox(height: 30.h,),
                               InkWell(
                                   onTap:(){
-
+                                    changeDeliveryStatus();
+                                    Navigator.pop(context);
                                   },child: Text('Cancel Delivery',style: globalvariable.lgtext9,)),
                               SizedBox(height: 10.h,),
                               progresses? isLoading

@@ -72,6 +72,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             keyboardType: widget.keyboard,
             controller: widget.controller,
             decoration: InputDecoration(
+              contentPadding: EdgeInsets.only(left: 5.w, top: 9.h),
               suffixIcon: GestureDetector(
                 onTap: widget.onTap,
                 child: Icon(
