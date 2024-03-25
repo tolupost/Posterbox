@@ -47,7 +47,6 @@ class _AccountScreenState extends State<AccountScreen> with SingleTickerProvider
   }
 
 
-
   File images = File('');
   void selectImages() async {
     var res = await pickImages();
