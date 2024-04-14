@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:posterbox/common/widgets/bottombar.dart';
+import 'package:posterbox/home/screens/contact_page.dart';
 import 'package:posterbox/router.dart';
 import 'package:posterbox/utils/globalvariable.dart';
 import 'Providers/delivery-providers.dart';
@@ -61,15 +62,16 @@ class _MyAppState extends State<MyApp> {
     return ScreenUtilInit(
       designSize: Size(375, 812),
         builder: (context , child)  =>MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange).copyWith(background: globalvariable.backgroundcolor),
-      ),
-      onGenerateRoute: (settings) => generateRoute(settings),
-      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const BottomBar()
-          : const splashpage(),
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange).copyWith(background: globalvariable.backgroundcolor),
+             ),
+         onGenerateRoute: (settings) => generateRoute(settings),
+         home:
+            Provider.of<UserProvider>(context).user.token.isNotEmpty
+                ? const BottomBar()
+                : const splashpage(),
 
     ));
   }

@@ -6,6 +6,7 @@ import 'package:posterbox/Providers/delivery-providers.dart';
 import 'package:posterbox/Providers/user-providers.dart';
 import 'package:posterbox/common/widgets/bottomBar.dart';
 import 'package:posterbox/common/widgets/button.dart';
+import 'package:posterbox/home/screens/contact_page.dart';
 import 'package:posterbox/home/services/homeService.dart';
 import 'package:posterbox/schedule/screens/Delivery.dart';
 import 'package:posterbox/GetQuote/screens/GetQuote.dart';
@@ -297,7 +298,10 @@ return AnimatedBuilder(animation: animationController!,
                         InkWell(onTap:() {
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>const GetQuote()));
                                 },child: const GridViewitems(image: 'assets/Vector3.png', title: 'Delivery Rate', desc: 'Get the  prices of deliveries within states')),
-                        InkWell(onTap:() {},child: const GridViewitems(image: 'assets/Vector4.png', title: 'Contact support', desc: 'Get the  prices of deliveries within states')),
+                        InkWell(onTap:() {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const ContactScreen()));
+
+                        },child: const GridViewitems(image: 'assets/Vector4.png', title: 'Contact support', desc: 'Reach out to us via various platforms')),
                           ],
                     ),
                   ),)

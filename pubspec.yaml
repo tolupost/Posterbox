@@ -51,7 +51,7 @@ dependencies:
   flutter_paystack: ^1.0.7
   onesignal_flutter: ^3.5.1
   rename: ^3.0.2
-
+  url_launcher: ^6.2.6
 
 
 dev_dependencies:
